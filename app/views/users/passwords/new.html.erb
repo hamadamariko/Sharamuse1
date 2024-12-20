@@ -1,0 +1,22 @@
+<div class ="forgotpage">
+  <div class="fyp">
+    <h2>パスワードをお忘れの方</h2>
+  </div>
+
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "users/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email",:size => "80*30" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "送信する" %>
+    </div>
+  <% end %>
+
+  <div class="next">
+    <%= render "users/shared/links" %>
+  </div>
+</div>

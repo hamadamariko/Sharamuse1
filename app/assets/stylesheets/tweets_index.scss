@@ -1,0 +1,70 @@
+// 親要素と小要素の関係をまず考える！、
+// 小要素のblank2は、中央揃えにして、大きさは全体の半分の長さかな〜みたいな感じ！
+
+// ここから下は、こだわりポイント！
+
+
+// どこの aタグなのかわからんから、.class名スペースaとする
+// .blank2 a{
+// color:#ffffff;
+// }
+.itiran{
+    height: 800px
+}
+.head{
+    width: 75%;
+    margin: 25px
+    }
+.log_out{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    font-size: 20px;
+    margin-left: 50px;
+    }
+    .lobutton{
+        margin-left: 50px;
+        font-size: 15px;
+    }
+
+    .pagenatet{
+        margin-left: 50px;
+    }
+
+.tag{
+    display:flex;
+    justify-content: flex-start;
+    font-size: 20px;
+    margin-left: 50px;
+}
+.tweets-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    }
+    .tweet{
+    text-align: center;
+    width: 25%;
+    
+    color: rgb(0, 0, 0);
+    background: #ffffff;
+    border-radius: 9px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    
+    }
+
+
+    
+    
+    
+
+    
+    
+    // // 場合に応じて入力する場所の大きさ変えたいよね！その場合は、.class名スペースinputで差別化する！
+    // // passwardの枠だけでかくしたかったらどうしたらいいかな？？
+    
+    

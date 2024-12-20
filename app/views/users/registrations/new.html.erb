@@ -1,0 +1,38 @@
+<div class="registar">
+
+<div class= "su">
+  <h2>🎶Sign up🎶</h2>
+</div>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "users/shared/error_messages", resource: resource %>
+
+<div class="mpc">
+  <div class="mail">
+    <%= f.label :mail_address %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",:size => "80*10" %>
+  </div>
+
+  <div class="password">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password",:size => "80*10" %>
+  </div>
+
+  <div class="comform">
+    <%= f.label :パスワードの確認 %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",:size => "80*10" %>
+  </div>
+</div>
+
+  <div class="actions">
+    <%= f.submit "登録する" %>
+  </div>
+<% end %>
+
+<div class="pre">
+  <%= render "users/shared/links" %>
+</div>
+</div>

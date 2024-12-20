@@ -1,0 +1,45 @@
+<div class="commentpage">
+  <div class="commenthead">
+    <h1>コメント</h1>
+  </div>
+
+  <div class="tweet">
+    <p><%= @tweet.body %></p>
+    <br>
+    <p><% if @tweet.youtube_url.present? %>
+      <iframe width="280" height="152" src="https://www.youtube.com/embed/<%= find_youtube_url(@tweet.youtube_url) %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <% end %></p>
+
+  </div>
+
+  <div class="comment-wrapper">
+    <p>コメント</p>
+    <% @comments.each do |c| %>
+      <div class="uc">
+        <%= c.user.email unless c.user.blank? %><br>
+        <br>
+        <%= c.content %><br>
+      </div>
+        <br>
+    <% end %>
+
+    <% if user_signed_in? %>
+      <%= form_with(model: [@tweet, @comment], local: true) do |f| %>
+          <%= f.text_area :content, :size => 300 %><br>
+        <div class="button">
+          <%= button_tag type: "submit" do %>
+            <i class="far fa-comments"></i> 投稿する
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <% @tweet.tagms.each do |tagm| %>
+  <% end %>
+
+  <div class="links">
+    <%= link_to "楽譜一覧に戻る", tweets_path,class: "litiran" %><br>
+    <%= link_to "編集する", edit_tweet_path(@tweet.id,class: "lhenshu") %>
+  </div>
+</div>

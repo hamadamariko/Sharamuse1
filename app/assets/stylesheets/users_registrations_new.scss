@@ -1,0 +1,50 @@
+.registar{
+    background-image: url("26b019ec8082326a2cecba89803fcbad_t.jpeg");
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 700px;
+}
+    .su{
+    width:100%;
+    height: 40px;
+    margin-left: 90px;
+    margin-top: 70px;
+    font-size: 18px;
+    }
+
+    .mpc{
+        width: 70%;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-content: center;
+        height: 200px;
+    }
+        .mail{
+        width: 100%;
+        height: 300px;
+        }
+
+        .password{
+        width:100%;
+        height: 30px;
+        }
+
+        .comform{
+            width:100%;
+            display: flex;
+            justify-content: flex-end;
+            height: 30px;
+        }
+
+    .action{
+    width: 100%;
+    }
+
+    .pre{
+    width: 100%;
+    margin-left: 90px;
+    font-size: 18px;
+    margin-top: 100px;
+    }

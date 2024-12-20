@@ -1,0 +1,50 @@
+<div class="itiran">
+<%= stylesheet_link_tag 'tweets_index', :media => "all" %>
+<div class="head">
+  <h1>楽譜一覧</h1>
+</div>
+
+<div class="log_out">
+  <div class="lobutton">
+  <%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></br>
+  </div>
+  <div class="paginatet">
+  <%= paginate @tweets %><br>
+  </div>
+</div>
+
+<div class="tag">
+  <%= form_tag tweets_path, method: :get, class: 'boards__searchForm' do %>
+    <%= select_tag :tagm_id,
+                    options_from_collection_for_select(Tagm.all, :id, :name, params[:tagm_id]),
+                     {
+                       prompt: 'タグで絞り込み検索',
+                       onchange: 'submit(this.form);'
+                     }
+    %>
+  <% end %>
+</div>
+
+<div class="tweets-container">
+  <% @tweets.each do |t| %>
+    <div class="tweet">
+        <div><%= t.body %></div>
+        <div><%= t.author %></div>
+        <%= link_to "詳細へ", tweet_path(t.id) %>
+        <%= link_to "編集する", edit_tweet_path(t.id) %>
+        <% t.tagms.each do |tagm| %>
+        <%= tagm.name %>
+        <%= button_to "削除する", tweet_path(t.id), method: :delete %>
+    <% end %>
+
+        <%= raw Rinku.auto_link(simple_format(t.otherurl)) %>
+
+    <% if t.youtube_url.present? %>
+    <iframe width="280" height="152" src="https://www.youtube.com/embed/<%= find_youtube_url(t.youtube_url) %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <% end %>
+    </div>
+  <% end %>
+      
+
+</div>
+</div>

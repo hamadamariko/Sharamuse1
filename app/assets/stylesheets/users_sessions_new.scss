@@ -1,0 +1,86 @@
+// 親要素と小要素の関係をまず考える！、
+// 小要素のblank2は、中央揃えにして、大きさは全体の半分の長さかな〜みたいな感じ！
+
+// ここから下は、こだわりポイント！
+
+
+// どこの aタグなのかわからんから、.class名スペースaとする
+// .blank2 a{
+// color:#ffffff;
+.blank2{
+    background-image: url("26b019ec8082326a2cecba89803fcbad_t.jpeg");
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 700px;
+
+    }
+    
+    .blank2 a{
+        height: 100px;
+        margin-left: 100px;
+    }
+
+    .head{
+        width: 100%;
+        height: 100px;
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+
+    .login{
+        width: 100%;
+        height: 100px;
+        margin-left: 100px;
+    }
+
+    .mp{
+        width: 70%;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-content: center;
+        height: 100px;
+    }
+        .mail{
+        border-style: none;
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: flex-end;
+        border-radius: 15px;
+
+        }
+    
+        .password{
+        border-style: none;
+        width: 100%;
+        height: 3ch;
+        display: flex;
+        justify-content: flex-end;
+        border-radius: 15px;
+
+        }
+    
+    .remember{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 50px;
+        align-items: center;
+    }
+    
+    .actions{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    
+    .choose{
+        font-size: 18px;
+        margin-top: 100px;
+    }

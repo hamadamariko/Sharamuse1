@@ -1,0 +1,24 @@
+<%= form_for @tweet do |f| %>
+<div class="editpage">
+    <div class="edit">
+      <h3>♪投稿を編集する♪</h3>
+    </div>
+
+    <div class= "fields">    
+    <%= f.label :music_name %>
+    <%= f.text_field :body, :size => 100 %><br>
+    <%= f.label :composer %>
+    <%= f.text_field :author, :size => 100 %><br>
+    <%= f.label :instrument %>
+    <%= f.text_field :instrument, :size => 100 %><br>
+    <%= f.label :youtube_url %>
+    <%= f.text_field :youtube_url, :size => 100 %><br>
+    <%= f.label :その他url %>
+    <%= f.text_field :otherurl, :size => 100 %><br>
+
+        <div class="submitbutton">
+          <%= f.submit "編集する" %><br>
+        </div>
+    </div>
+</div>
+<% end %>

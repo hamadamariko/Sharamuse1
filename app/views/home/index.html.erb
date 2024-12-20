@@ -1,0 +1,62 @@
+<div class="home">
+    <div class="links">
+        <%= link_to 'ログイン', new_user_session_path,class: "lc" %>
+    </div>
+
+    <div class="title">
+        <h1>Welcome to Sharamuse1!</h1><br>
+    </div>
+
+    <div class="what">
+        <div class="what_head">
+            <h2>What is Sharamuse1?</h2><br>
+        </div>
+        <div class="what_about_title">
+            <h3>Sharamuse1とは</h3>
+        </div>
+        <div class="what_about_more">
+            <h4>sharamuse1(シェアラミューズ)は、自分の編曲したものや作曲したものを共有するプラットフォームです。<br>
+                <br>
+                自分のmusicをshareしよう!<br>
+        </div>
+    </div>
+
+    <div class="use">
+        <div class="use_head">
+            <h2>How to Use Sharamuse1?</h2><br>
+        </div>
+
+        <div class="how_to_title">
+            <h3>Sharamuse1の使い方</h3>
+        </div>
+        <div class="how_to_more">
+            <h4>1.まずはログイン</h4>
+            <br>
+            <h5>メールアドレスとパスワードを入力するだけ!<br>
+                ここからログイン
+                <%= link_to 'ログイン', new_user_session_path,class: "logc" %></h5>
+                <br>
+                <br>
+            <h4>2.投稿してみよう</h4>
+            <br>
+            <h5>”新規投稿”をクリック<br>
+                
+                投稿したい曲の情報を書き込む。ComposerはニックネームでOK<br>
+                
+                <%= link_to '新規投稿', tweets_new_path,class: "tweetc" %><br>
+                <br>
+                <br>
+            <h4>3.他の人の投稿にコメントしてみよう</h4>
+            <br>
+            <h5>"楽譜一覧"をクリック
+                <%= link_to '楽譜一覧', tweets_path,class: "itiranc" %><br>
+                楽譜一覧からコメントしたい投稿の"詳細へ"をクリック<br>
+                他の人の投稿に対して感想やアドバイスを入力して完了<br>
+        </div>
+    </div>
+
+    <div class="compose">
+    </div>
+
+</div>
+
